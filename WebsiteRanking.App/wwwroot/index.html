@@ -7,10 +7,25 @@
     <link href="css/site.css" rel="stylesheet" />
 </head>
 <body>
-
     <div ng-controller="websitesController">
 
-        <h1 >{{helloMessage}}</h1>
+        <h1>Top Website Visits</h1>
+        <br />
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Website</th>
+                    <th>Visit Count</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="websiteVisit in webistesVisitList">
+                    <td>{{websiteVisit.website}}</td>
+                    <td>{{websiteVisit.visitCount}}</td>
+                </tr>
+            </tbody>
+        </table>
 
     </div>
 
