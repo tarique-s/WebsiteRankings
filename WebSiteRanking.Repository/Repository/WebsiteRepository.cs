@@ -14,6 +14,17 @@ namespace WebSiteRanking.Repository
             _context = context;
         }
 
+        public IList<string> GetVisitDates()
+        {
+            var dates = _context.WebsiteVisit.Select(wv => wv.Date)
+                                             .OrderByDescending(wv=>wv.Date)
+                                             .Distinct()
+                                             .ToList();
+
+            return dates.Select(date => date.ToString("yyyy-MM-dd")).ToList();
+
+        }
+
         public IList<WebsiteDto> GetTopWebsitesByDate(DateTime date)
         {            
             return _context.WebsiteVisit.Where(wv => wv.Date == date)
@@ -21,5 +32,6 @@ namespace WebSiteRanking.Repository
                                         .OrderByDescending(dto=>dto.VisitCount)
                                         .ToList();            
         }
+
     }
 }

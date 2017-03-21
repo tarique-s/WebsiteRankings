@@ -16,7 +16,6 @@ namespace WebSiteRankingApi.Controllers
 
         #endregion
 
-
         #region .ctor
         
         public WebsitesController(IWebsiteRepository repository)

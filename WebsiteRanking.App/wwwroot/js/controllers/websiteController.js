@@ -2,7 +2,6 @@
 
 websitesApp.controller('websitesController',
     function websitesController($scope) {
-        $scope.helloMessage = 'Hello Tarique';
 
         $scope.webistesVisitList = [
             { "website": "www.google.com.au", "visitCount": 151749278 },
@@ -14,6 +13,9 @@ websitesApp.controller('websitesController',
             { "website": "www.ebay.com.au", "visitCount": 19831166 },
             { "website": "www.bing.com", "visitCount": 14065457 },
             { "website": "www.wikipedia.org", "visitCount": 13246531 },
-            { "website": "au.yahoo.com", "visitCount": 11492756 }]
+            { "website": "au.yahoo.com", "visitCount": 11492756 }
+        ]
+
+        $scope.visitDates = ["2016-01-06", "2016-01-13", "2016-01-20", "2016-01-27"];
     }
 )
