@@ -7,6 +7,6 @@ namespace WebSiteRanking.Repository
     public interface IWebsiteRepository
     {
         IList<string> GetVisitDates();
-        IList<WebsiteDto> GetTopWebsitesByDate(DateTime date);
+        IList<WebsiteDto> GetTopWebsitesByDate(DateTime date, int count);
     }
 }

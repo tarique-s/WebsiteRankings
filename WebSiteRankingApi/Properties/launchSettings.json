@@ -9,17 +9,17 @@
   },
   "profiles": {
     "IIS Express": {
-      "commandName": "IISExpress",
-      "launchBrowser": true,
-      "launchUrl": "api/values",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+        "commandName": "IISExpress",
+        "launchBrowser": true,
+        "launchUrl": "api/websites/2016-01-06/5",
+        "environmentVariables": {
+            "ASPNETCORE_ENVIRONMENT": "Development"
+        }
     },
     "WebSiteRankingApi": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/websites/2016-01-06",
+      "launchUrl": "api/websites/2016-01-06/5",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },

@@ -25,11 +25,12 @@ namespace WebSiteRanking.Repository
 
         }
 
-        public IList<WebsiteDto> GetTopWebsitesByDate(DateTime date)
+        public IList<WebsiteDto> GetTopWebsitesByDate(DateTime date, int count)
         {            
             return _context.WebsiteVisit.Where(wv => wv.Date == date)
                                         .Select(wv => new WebsiteDto { Website = wv.Website.Website1, VisitCount = wv.VisitCount })
                                         .OrderByDescending(dto=>dto.VisitCount)
+                                        .Take(count)
                                         .ToList();            
         }
 

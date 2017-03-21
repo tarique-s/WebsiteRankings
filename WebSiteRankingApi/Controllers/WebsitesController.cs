@@ -27,11 +27,11 @@ namespace WebSiteRankingApi.Controllers
 
         #region Public Methods
 
-        [HttpGet("{date}")]
-        public IEnumerable<WebsiteDto> Get(string date)
+        [HttpGet("{date}/{count}")]
+        public IEnumerable<WebsiteDto> Get(string date,int count)
         {
             DateTime visitDate = DateTime.Parse(date);
-            return _repository.GetTopWebsitesByDate(visitDate);
+            return _repository.GetTopWebsitesByDate(visitDate,count);
         }
 
 
