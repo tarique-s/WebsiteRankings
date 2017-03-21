@@ -13,8 +13,9 @@
         <br />
 
         Visit Dates :
-        <select >
-            <option ng-repeat="visitDate in visitDateList">{{visitDate}}</option>
+        <select ng-model="selectedDate" ng-change="getWebsitesList(selectedDate)">
+            <option value="">--Select a Date--</option>
+            <option ng-repeat="visitDate in visitDateList" >{{visitDate}}</option>
         </select>
 
         <br /><br />
