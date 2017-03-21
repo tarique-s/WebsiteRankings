@@ -1,3 +1,3 @@
 ﻿'use strict';
 
-var websitesApp = angular.module('websitesApp', []);
+var websitesApp = angular.module('websitesApp', ['ngResource']);

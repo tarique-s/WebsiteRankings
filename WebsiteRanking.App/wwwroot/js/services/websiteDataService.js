@@ -1,27 +1,17 @@
 ﻿
-websitesApp.factory('websitesDataService', function ($http, $log) {
+websitesApp.factory('websitesDataService', function ($resource) {
     return {
 
-        getVisitDates: function (successCb) {
-            $http({ method: 'GET', url: 'http://websiterankingapi.azurewebsites.net/api/visitDates' }).
-            //$http({ method: 'GET', url: 'http://localhost:8272/api/visitDates' }).
-            success(function (data, status, headers, config){
-                successCb(data);
-            }).
-            error(function (data, status, headers, config) {
-                $log.warn(data, status, headers, config);
-            })
+        getVisitDates: function () {
+            //return $resource('http://websiterankingapi.azurewebsites.net/api/visitDates').query(); 
+            return $resource('http://localhost:8272/api/visitDates').query();
+
         },
 
-        getWebsitesVisitList: function (successCb) {
-            $http({ method: 'GET', url: 'http://websiterankingapi.azurewebsites.net/api/websites/2016-01-06/5' }).
-            //$http({ method: 'GET', url: 'http://localhost:8272/api/websites/2016-01-06/5' }).
-            success(function (data, status, headers, config) {
-                    successCb(data);
-            }).
-            error(function (data, status, headers, config) {
-                    $log.warn(data, status, headers, config);
-            })
+        getWebsitesVisitList: function (selectedDate) {
+            // $resource('http://websiterankingapi.azurewebsites.net/api/websites/:date/5').query({ date: selectedDate });  
+            return $resource('http://localhost:8272/api/websites/:date/5').query({ date: selectedDate });
+            
         }
     };
 });
