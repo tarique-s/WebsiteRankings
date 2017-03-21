@@ -16,6 +16,6 @@ websitesApp.controller('websitesController',
             { "website": "au.yahoo.com", "visitCount": 11492756 }
         ]
 
-        $scope.visitDates = ["2016-01-06", "2016-01-13", "2016-01-20", "2016-01-27"];
+        $scope.visitDateList = ["2016-01-06", "2016-01-13", "2016-01-20", "2016-01-27"];
     }
 )

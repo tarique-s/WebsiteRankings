@@ -12,6 +12,22 @@
         <h1>Top Website Visits</h1>
         <br />
 
+        Visit Dates :
+        <select >
+            <option ng-repeat="visitDate in visitDateList">{{visitDate}}</option>
+        </select>
+
+        <!--<div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                Visit Dates
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" >
+                <li ><a href="#">{{visitDate}}</a></li>
+            </ul>            
+        </div>-->  
+        <br /><br />
+
         <table class="table table-striped">
             <thead>
                 <tr>
