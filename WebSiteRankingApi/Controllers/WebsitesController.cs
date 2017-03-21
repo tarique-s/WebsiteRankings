@@ -7,7 +7,7 @@ using WebSiteRanking.Repository;
 
 namespace WebSiteRankingApi.Controllers
 {
-    //[EnableCors("CORSPolicy")]
+
     [Route("api/[controller]")]
 
     public class WebsitesController : Controller

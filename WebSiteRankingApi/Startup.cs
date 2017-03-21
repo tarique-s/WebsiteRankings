@@ -28,8 +28,6 @@ namespace WebSiteRankingApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCors(options => options.AddPolicy("CORSPolicy", builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
-            //services.AddCors(options => options.AddPolicy("CORSPolicy", builder => builder.WithOrigins("http://localhost:11148").AllowAnyHeader().AllowAnyMethod()));
-            //services.AddCors();
             services.AddMvc();
             services.Configure<MvcOptions>(options =>
             {
@@ -48,9 +46,7 @@ namespace WebSiteRankingApi
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddConsole();
             loggerFactory.AddDebug();
-
-            //app.UseCors("CORSPolicy");
-            //app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+            
             app.UseMvc();
         }
     }
