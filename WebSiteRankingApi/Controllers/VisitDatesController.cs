@@ -1,9 +1,11 @@
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using WebSiteRanking.Repository;
 
 namespace WebSiteRankingApi.Controllers
 {
+    //[EnableCors("CORSPolicy")]
     [Route("api/[controller]")]
 
     public class VisitDatesController : Controller

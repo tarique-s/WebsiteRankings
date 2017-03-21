@@ -5,7 +5,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using WebSiteRanking.Repository;
-
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Cors.Internal;
 
 namespace WebSiteRankingApi
 {
@@ -26,10 +27,17 @@ namespace WebSiteRankingApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options => options.AddPolicy("CORSPolicy", builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
+            //services.AddCors(options => options.AddPolicy("CORSPolicy", builder => builder.WithOrigins("http://localhost:11148").AllowAnyHeader().AllowAnyMethod()));
+            //services.AddCors();
+            services.AddMvc();
+            services.Configure<MvcOptions>(options =>
+            {
+                options.Filters.Add(new CorsAuthorizationFilterFactory("CORSPolicy"));
+            });
+
             services.AddDbContext<WebsiteContext>(options =>
                                     options.UseSqlServer(Configuration.GetConnectionString("WebsitesDB")));
-
-            services.AddMvc();
             services.AddScoped<IWebsiteRepository, WebsiteRepository>();
 
         }
@@ -40,6 +48,9 @@ namespace WebSiteRankingApi
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddConsole();
             loggerFactory.AddDebug();
+
+            //app.UseCors("CORSPolicy");
+            //app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
             app.UseMvc();
         }
     }
