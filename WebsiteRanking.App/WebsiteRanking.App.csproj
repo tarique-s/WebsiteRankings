@@ -12,6 +12,7 @@
     <Content Include="wwwroot\index.html" />
     <Content Include="wwwroot\js\app.js" />
     <Content Include="wwwroot\js\controllers\websiteController.js" />
+    <Content Include="wwwroot\js\services\websiteDataService.js" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
@@ -23,9 +24,6 @@
   </ItemGroup>
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.0" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="wwwroot\js\services\" />
   </ItemGroup>
 
 </Project>
