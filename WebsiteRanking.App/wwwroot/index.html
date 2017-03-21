@@ -17,15 +17,6 @@
             <option ng-repeat="visitDate in visitDateList">{{visitDate}}</option>
         </select>
 
-        <!--<div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-                Visit Dates
-                <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" >
-                <li ><a href="#">{{visitDate}}</a></li>
-            </ul>            
-        </div>-->  
         <br /><br />
 
         <table class="table table-striped">
@@ -38,7 +29,7 @@
             <tbody>
                 <tr ng-repeat="websiteVisit in webistesVisitList">
                     <td>{{websiteVisit.website}}</td>
-                    <td>{{websiteVisit.visitCount}}</td>
+                    <td>{{websiteVisit.visitCount | number}}</td>
                 </tr>
             </tbody>
         </table>
