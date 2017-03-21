@@ -27,11 +27,11 @@ namespace WebSiteRankingApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCors(options => options.AddPolicy("CORSPolicy", builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
+            services.AddCors(options => options.AddPolicy("AllowAllOrigins", builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod().AllowCredentials()));
             services.AddMvc();
             services.Configure<MvcOptions>(options =>
             {
-                options.Filters.Add(new CorsAuthorizationFilterFactory("CORSPolicy"));
+                options.Filters.Add(new CorsAuthorizationFilterFactory("AllowAllOrigins"));
             });
 
             services.AddDbContext<WebsiteContext>(options =>
