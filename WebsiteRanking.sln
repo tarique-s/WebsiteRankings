@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSiteRankingApi", "WebSiteRankingApi\WebSiteRankingApi.csproj", "{0352B052-3226-4BF7-9A7F-8CB740A49402}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSiteRanking.Repository", "WebSiteRanking.Repository\WebSiteRanking.Repository.csproj", "{00284A73-21E4-4332-B77A-7403D9C76CEC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.API", "2.API", "{4C9515E2-F601-4099-BE29-329B5F97E971}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Repository", "3.Repository", "{16B358C9-1760-41F9-BB85-04AA59DBAB64}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{EBF9139B-2907-4591-837A-8274E39DAE39}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.Common", "4.Common", "{5D29A845-02C5-4A99-B87B-71A898E4BD50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSiteRanking.Common", "WebSiteRanking.Common\WebSiteRanking.Common.csproj", "{A78E39DC-A069-43F2-BCED-CFC68D8AEF1A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Web App", "1.Web App", "{9CC554EA-9A87-4D03-B1A6-93F8F4DAFD1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebsiteRanking.App", "WebsiteRanking.App\WebsiteRanking.App.csproj", "{E5A680D1-36C0-4C51-BFF7-0A651027A28C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0352B052-3226-4BF7-9A7F-8CB740A49402}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0352B052-3226-4BF7-9A7F-8CB740A49402}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0352B052-3226-4BF7-9A7F-8CB740A49402}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0352B052-3226-4BF7-9A7F-8CB740A49402}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00284A73-21E4-4332-B77A-7403D9C76CEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00284A73-21E4-4332-B77A-7403D9C76CEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00284A73-21E4-4332-B77A-7403D9C76CEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00284A73-21E4-4332-B77A-7403D9C76CEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A78E39DC-A069-43F2-BCED-CFC68D8AEF1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A78E39DC-A069-43F2-BCED-CFC68D8AEF1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A78E39DC-A069-43F2-BCED-CFC68D8AEF1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A78E39DC-A069-43F2-BCED-CFC68D8AEF1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5A680D1-36C0-4C51-BFF7-0A651027A28C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5A680D1-36C0-4C51-BFF7-0A651027A28C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5A680D1-36C0-4C51-BFF7-0A651027A28C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5A680D1-36C0-4C51-BFF7-0A651027A28C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0352B052-3226-4BF7-9A7F-8CB740A49402} = {4C9515E2-F601-4099-BE29-329B5F97E971}
+		{00284A73-21E4-4332-B77A-7403D9C76CEC} = {16B358C9-1760-41F9-BB85-04AA59DBAB64}
+		{A78E39DC-A069-43F2-BCED-CFC68D8AEF1A} = {5D29A845-02C5-4A99-B87B-71A898E4BD50}
+		{E5A680D1-36C0-4C51-BFF7-0A651027A28C} = {9CC554EA-9A87-4D03-B1A6-93F8F4DAFD1C}
+	EndGlobalSection
+EndGlobal
