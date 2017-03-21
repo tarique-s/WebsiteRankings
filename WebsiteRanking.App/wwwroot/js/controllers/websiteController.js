@@ -3,7 +3,12 @@
 websitesApp.controller('websitesController',
     function websitesController($scope, websitesDataService) {
 
-        $scope.webistesVisitList = websitesDataService.webistesVisitList;
-        $scope.visitDateList = websitesDataService.visitDateList;
+        websitesDataService.getVisitDates(function (visitDates) {
+            $scope.visitDateList = visitDates;
+        });
+
+        websitesDataService.getWebsitesVisitList(function (websitesList) {
+            $scope.webistesVisitList = websitesList;
+        });
     }
 )
